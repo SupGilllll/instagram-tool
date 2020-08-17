@@ -1,0 +1,1 @@
+SCHTASKS /Create /SC ONCE /TN task_a /TR C:\luc\run.bat /ST 12:00 /RI 60 /ET 14:00 /K
