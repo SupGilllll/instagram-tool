@@ -1,19 +1,32 @@
 py begin
 import confige
-print(confige.model)
 py finish
+//读取最大容许点赞数
+py print(confige.like_max_numbers)
 echo py_result
 echo `py_result`
-model = py_result
-if model=="1"
-{
-tagui spot.tag
-}
-if model=="2"
-{
+like_max_numbers = py_result
+//读取最大容许关注数
+py print(confige.follow_max_numbers)
+echo py_result
+echo `py_result`
+follow_max_numbers = py_result
+//读取最大容许取关数
+py print(confige.unfollow_max_numbers)
+echo py_result
+echo `py_result`
+unfollow_max_numbers = py_result
+wait 3
+echo keyword.tag
 tagui keyword.tag
-}
-if model=="3"
-{
+wait 3
+echo spot.tag
+tagui spot.tag
+wait 3
+echo famous.tag
 tagui famous.tag
-}
+wait 3
+echo unfollow.tag
+tagui unfollow.tag
+
+
